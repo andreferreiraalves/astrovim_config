@@ -52,6 +52,32 @@ return {
     servers = {
       -- "pyright"
     },
+    skip_setup = { "dartls" },
+    ["server-settings"] = {
+      -- example for addings schemas to yamlls
+      -- yamlls = { -- override table for require("lspconfig").yamlls.setup({...})
+      --   settings = {
+      --     yaml = {
+      --       schemas = {
+      --         ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*.{yml,yaml}",
+      --         ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+      --         ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
+      --       },
+      --     },
+      --   },
+      -- },
+      dartls = {
+        -- any changes you want to make to the LSP setup, for example
+        color = {
+          enabled = true,
+        },
+        settings = {
+          showTodos = true,
+          completeFunctionCalls = true,
+	        lineLength = 1000000,
+        },
+      },
+    },
   },
 
   -- Configure require("lazy").setup() options
