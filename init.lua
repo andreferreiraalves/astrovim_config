@@ -53,7 +53,7 @@ return {
       -- "pyright"
     },
     skip_setup = { "dartls" },
-    ["server-settings"] = {
+    --[[ ["server-settings"] = { ]]
       -- example for addings schemas to yamlls
       -- yamlls = { -- override table for require("lspconfig").yamlls.setup({...})
       --   settings = {
@@ -66,18 +66,18 @@ return {
       --     },
       --   },
       -- },
-      dartls = {
-        -- any changes you want to make to the LSP setup, for example
-        color = {
-          enabled = true,
-        },
-        settings = {
-          showTodos = true,
-          completeFunctionCalls = true,
-	        lineLength = 1000000,
-        },
-      },
-    },
+     --   dartls = {
+     --     -- any changes you want to make to the LSP setup, for example
+     --     color = {
+     --       enabled = true,
+     --     },
+     --     settings = {
+     --       showTodos = true,
+     --       completeFunctionCalls = true,
+	    --      lineLength = 1000000,
+     --     },
+     --   },
+     -- },
   },
 
   -- Configure require("lazy").setup() options
